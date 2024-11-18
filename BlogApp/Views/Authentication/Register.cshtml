@@ -1,4 +1,6 @@
-﻿<div class="container">
+﻿@model RegisterDto
+
+<div class="container">
 	<div class="row">
 		<div class="col-md-6">
 			<label class="form-control">First Name</label>
@@ -23,11 +25,6 @@
 		<div class="col-md-6">
 			<label class="form-control">Password</label>
 			<input type="text" asp-for="Password" />
-		</div>
-
-		<div class="col-md-6">
-			<label class="form-control">Confirm Password</label>
-			<input type="text" asp-for="ConfirmPassword" />
 		</div>
 
 		<div class="col-md-6">
