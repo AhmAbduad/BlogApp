@@ -1,0 +1,17 @@
+﻿<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<label class="form-control">User Name</label>
+			<input type="text" asp-for="UserName"/>
+		</div>
+
+		<div class="col-md-6">
+			<label class="form-control">Password</label>
+			<input type="text" asp-for="Password"/>
+		</div>
+
+		<div class="col-md-6">
+			<a class="btn btn-primary" asp-controller="Authentication" asp-action="SubmitLogin">Submit</a>
+		</div>
+	</div>
+</div>

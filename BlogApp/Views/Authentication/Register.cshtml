@@ -1,0 +1,37 @@
+﻿<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<label class="form-control">First Name</label>
+			<input type="text" asp-for="FirstName"/>
+		</div>
+
+		<div class="col-md-6">
+			<label class="form-control">Last Name</label>
+			<input type="text" asp-for="LastName"/>
+		</div>
+
+		<div class="col-md-6">
+			<label class="form-control">User Name</label>
+			<input type="text" asp-for="UserName" />
+		</div>
+
+		<div class="col-md-6">
+			<label class="form-control">Email</label>
+			<input type="text" asp-for="Email" />
+		</div>
+
+		<div class="col-md-6">
+			<label class="form-control">Password</label>
+			<input type="text" asp-for="Password" />
+		</div>
+
+		<div class="col-md-6">
+			<label class="form-control">Confirm Password</label>
+			<input type="text" asp-for="ConfirmPassword" />
+		</div>
+
+		<div class="col-md-6">
+			<a class="btn btn-primary" asp-controller="Authentication" asp-action="SubmitRegister">Submit</a>
+		</div>
+	</div>
+</div>
