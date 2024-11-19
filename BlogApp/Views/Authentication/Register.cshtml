@@ -2,33 +2,42 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-6">
-			<label class="form-control">First Name</label>
-			<input type="text" asp-for="FirstName"/>
-		</div>
 
-		<div class="col-md-6">
-			<label class="form-control">Last Name</label>
-			<input type="text" asp-for="LastName"/>
-		</div>
+		<form method="post" asp-controller="Authentication" asp-action="SubmitRegister">
+			<div class="col-md-6">
+				<label>First Name</label>
+				<input class="form-control" type="text" asp-for="FirstName" />
+				<span asp-validation-for="FirstName" class="text-danger"></span>
+			</div>
 
-		<div class="col-md-6">
-			<label class="form-control">User Name</label>
-			<input type="text" asp-for="UserName" />
-		</div>
+			<div class="col-md-6">
+				<label>Last Name</label>
+				<input class="form-control" type="text" asp-for="LastName" />
+				<span asp-validation-for="LastName" class="text-danger"></span>
+			</div>
 
-		<div class="col-md-6">
-			<label class="form-control">Email</label>
-			<input type="text" asp-for="Email" />
-		</div>
+			<div class="col-md-6">
+				<label>User Name</label>
+				<input class="form-control" type="text" asp-for="UserName" />
+				<span asp-validation-for="UserName" class="text-danger"></span>
+			</div>
 
-		<div class="col-md-6">
-			<label class="form-control">Password</label>
-			<input type="text" asp-for="Password" />
-		</div>
+			<div class="col-md-6">
+				<label>Email</label>
+				<input class="form-control" type="text" asp-for="Email" />
+				<span asp-validation-for="Email" class="text-danger"></span>
+			</div>
 
-		<div class="col-md-6">
-			<a class="btn btn-primary" asp-controller="Authentication" asp-action="SubmitRegister">Submit</a>
-		</div>
+			<div class="col-md-6">
+				<label>Password</label>
+				<input class="form-control" type="password" asp-for="Password" />
+				<span asp-validation-for="Password" class="text-danger"></span>
+			</div>
+
+			<div class="col-md-6">
+				<button type="submit" class="btn btn-primary">Register</button>
+			</div>
+		</form>
+		
 	</div>
 </div>
