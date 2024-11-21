@@ -30,7 +30,7 @@ namespace BlogApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SubmitRegister(RegisterDto model)
+        public IActionResult Register(RegisterDto model)
         {
             if(ModelState.IsValid)
             {
@@ -48,6 +48,29 @@ namespace BlogApp.Controllers
                 context.SaveChanges();
 
                 return RedirectToAction("Index","Authentication");
+            }
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Login(LoginDto login)
+        {
+            if(ModelState.IsValid)
+            {
+                var user = context.Register.SingleOrDefault(u=>u.Email == login.Email);
+
+                if(user==null)
+                {
+                    ModelState.AddModelError("Email", "Email is not registered");
+                    return View(login);
+                }
+
+                
+                if (user.Password != login.Password)
+                {
+                    ModelState.AddModelError("Password", "Incorrect password.");
+                    return View(login);
+                }
             }
 
             return RedirectToAction("Index", "Authentication");
