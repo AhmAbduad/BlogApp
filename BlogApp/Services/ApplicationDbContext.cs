@@ -10,5 +10,7 @@ namespace BlogApp.Services
         }
 
         public DbSet<RegisterDto> Register { get; set; }
+
+        public DbSet<LoginAttempt> LoginAttempts { get; set; }
     }
 }
