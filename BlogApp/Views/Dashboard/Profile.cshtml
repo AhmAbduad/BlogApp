@@ -1,0 +1,44 @@
+﻿@model RegisterDto
+
+
+<div class="container">
+	<div class="row">
+
+		<form method="post" asp-controller="Dashboard" asp-action="Updatingprofile">
+			<div class="col-md-6">
+				<label>Id</label>
+				<input type="text" class="form-control" value="@ViewData["Id"]" asp-for="Id" readonly/>
+			</div>
+
+			<div class="col-md-6">
+				<label>First Name</label>
+				<input type="text" class="form-control" value="@ViewData["FirstName"]" asp-for="FirstName" />
+			</div>
+
+			<div class="col-md-6">
+				<label>Last Name</label>
+				<input type="text" class="form-control" value="@ViewData["LastName"]" asp-for="LastName" />
+			</div>
+
+			<div class="col-md-6">
+				<label>UserName</label>
+				<input type="text" class="form-control" value="@ViewData["UserName"]" asp-for="UserName" />
+			</div>
+
+			<div class="col-md-6">
+				<label>Email</label>
+				<input type="text" class="form-control" value="@ViewData["Email"]" asp-for="Email"/>
+			</div>
+
+			<div class="col-md-6">
+				<label>Password</label>
+				<input type="password" class="form-control" value="@ViewData["Password"]" asp-for="Password" />
+			</div>
+
+			<div class="col-md-6">
+				<button type="submit" class="btn btn-primary">Update</button>
+			</div>
+		</form>
+		
+	</div>
+</div>

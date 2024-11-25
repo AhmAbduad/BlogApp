@@ -106,7 +106,7 @@ namespace BlogApp.Controllers
                     context.LoginAttempts.Update(loginAttempt);
                     context.SaveChanges();
 
-					return RedirectToAction("Index", "Authentication");
+					return RedirectToAction("Index", "Dashboard", new { id = user.Id });
 				}
                 else
                 {
@@ -121,7 +121,6 @@ namespace BlogApp.Controllers
 
 					return View(login);
 				}
-
 		}
     }
 }
