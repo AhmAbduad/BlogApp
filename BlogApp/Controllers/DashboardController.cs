@@ -62,5 +62,10 @@ namespace BlogApp.Controllers
 
 			return RedirectToAction("Index", "Dashboard", new { id = user.Id });
 		}
+
+		public IActionResult Logout()
+		{
+			return RedirectToAction("Index","Authentication");
+		}
 	}
 }
