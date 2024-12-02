@@ -1,11 +1,11 @@
 ﻿<header class="navbarheader">
-	<div class="container-fluid mynavbar">
-		<div class="row">
-			<div class="col-md-3 col-sm-12">
+	<div class="container mynavbar">
+		<div class="row navbarrow">
+			<div class="col-md-3 col-sm-12 navbarlink">
 				<a href="#">Blog Website</a>
 			</div>
 
-			<div class="col-md-9 col-sm-12 text-end">
+			<div class="col-md-9 col-sm-12 text-end navbarlinks">
 				<a href="#">HOME</a>
 				<a href="#">ABOUT</a>
 				<a href="#">SERVICE</a>
@@ -14,18 +14,139 @@
 		</div>
 	</div>
 
-	<div class="carousel-container">
-		<div class="carousel">
-			<div class="carousel-item">
-				<p> This is paragraph 1</p>
+	<div class="container navbarmaincontent">
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<p class="navbarparagraph">Welcome to Our Blog Website</p>
 			</div>
-			<div class="carousel-item">
-				<p>This is paragraph 2</p>
+
+			<div class="col-md-6 col-sm-12">
+				<button type="submit">Contact Us</button>
 			</div>
 			
 		</div>
-		<button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-		<button class="next" onclick="moveSlide(1)">&#10095;</button>
 	</div>
 </header>
 
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-12 main-content1">
+				<h2>About Us</h2>
+				<p class="navbarparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="col-md-6 col-sm-12 main-content2" >
+				<p class="navbarparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="model-popup">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center">
+				<h1>At your Service</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<img src="~/images/s-1.png" width="50px" height="50px"/>
+				<h2>Written with your love</h2>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content t, </p>
+				<button>Read More</button>
+				<br />
+				<br />
+				<br />
+				<img src="~/images/s-3.png" width="50px" height="50px" />
+				<h2>Up-to-date</h2>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content t, </p>
+				<button>Read More</button>
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+				<img src="~/images/s-2.png" width="50px" height="50px" />
+				<h2>Fast Turnaround</h2>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content t, </p>
+				<button>Read More</button>
+				<br />
+				<br />
+				<br />
+				<img src="~/images/s-4.png" width="50px" height="50px" />
+				<h2>Premium Content</h2>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content t, </p>
+				<button>Read More</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 col-sm-12">
+				<h2>Get Your Quote</h2>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+			</div>
+
+			<div class="col-md-4 col-sm-12">
+				<button>Get Your Quote</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center mt-5">
+				<h1 class="touchheading">Let's Get In Touch! </h1>
+			</div>
+		</div>
+
+		<div class="row contactusformandimage pt-5 pb-4">
+			<div class="col-md-6 col-sm-12">
+				@* @using (Html.BeginForm("Contact", "FrontEnd", FormMethod.Post))
+				{
+						@Html.Label("Name");
+						@Html.TextBox("Name");
+						<br />
+						@Html.Label("Email");
+						@Html.TextBox("Email");
+						<br />
+						@Html.Label("Message");
+						@Html.TextArea("Message", "Message", new { @class = "form-control", rows = 5, cols = 20 });
+						<br />
+						<button type="submit">Send</button>
+				} *@
+
+				<form method="post" asp-controller="FrontEnd" asp-action="Contact">
+					<input type="text" placeholder="Name" class="form-control"/>
+					<br />
+					<input type="text" placeholder="Email" class="form-control" />
+					<br />
+					<textarea rows="5" cols="20" placeholder="Message" class="form-control"></textarea>
+					<br />
+					<button type="submit">Send</button>
+				</form>
+				
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<img src="~/images/contact-img.jpg"/>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h2 class="touchheading text-center">Contact Us</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center">
+				<i class="fa fa-location-dot"></i>
+				<i class="fa fa-phone"></i>
+				<i class="fa fa-message"></i>
+				
+			</div>
+		</div>
+	</div>
+</section>

@@ -7,57 +7,89 @@
     background-image: url('../images/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size:cover;
-    height:200px;
+    height:600px;
+    padding-top:30px;
+    color:white;
 }
 
 a{
     text-decoration:none;
 }
 
-
-.carousel-container {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
+.navbarlink a {
+    text-decoration: none; /* Remove the default underline */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    font-size: 18px; /* Font size for readability */
+    color: #FF6F61; /* Light blue color for the link */
+    padding: 10px 20px; /* Padding for extra space around the text */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+    display: inline-block; /* Make sure the link is treated as a block element for padding and margin */
 }
 
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease;
+.navbarlinks a {
+    padding-right: 50px;
+    text-decoration: none; /* Remove the default underline */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    font-size: 18px; /* Font size for readability */
+    color: #FF6F61; /* Light blue color for the link */
+    padding: 10px 20px; /* Padding for extra space around the text */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+    display: inline-block; /* Make sure the link is treated as a block element for padding and margin */
 }
 
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.carousel img {
-    width: 100%;
-    display: block;
+.navbarmaincontent{
+    padding-top:200px;
 }
 
 button {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: #4CAF50; /* Green background */
     border: none;
-    padding: 10px;
+    color: white;
+    padding: 15px 32px; /* Padding around text */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top:20px;
     cursor: pointer;
-    z-index: 1000;
-    transform: translateY(-50%);
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.prev {
-    left: 10px;
+.navbarparagraph {
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    font-size: 18px; /* Font size for readability */
+    line-height: 1.6; /* Spacing between lines for better readability */
+    color: #333333; /* Dark grey text color for a more pleasant read */
+    text-align: justify; /* Justified text alignment for a neat appearance */
+    margin: 20px 0; /* Space above and below the paragraph */
+    padding: 10px 20px; /* Padding inside the paragraph */
+    background-color: #f4f4f9; /* Light background color */
+    border-left: 4px solid #4CAF50; /* Green left border for a stylish accent */
+    border-radius: 8px; /* Rounded corners for the background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.next {
-    right: 10px;
+.main-content1{
+    padding-top:100px;
 }
 
-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+.model-popup {
+    background-image:url('../images/body_bg.jpg');
+}
+
+.touchheading {
+    text-decoration: underline;
+}
+
+.contactusformandimage{
+    background-color:#ffffff;
+}
+
+.iconsize{
+    font-size:50px;
 }
